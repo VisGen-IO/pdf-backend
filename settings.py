@@ -16,4 +16,4 @@ if ENV_MODE == 'local':
         os.environ.update(json_env)
 
 DEBUG_MODE = env.bool("DEBUG_MODE", default=False)
-DB_URL = env("DB_URL")
+DB_URL = env("DB_URL", default="postgresql://vision:lXvUXya6hrO09Oqg0Egf6WEiNFEK2Fqh@dpg-cs7adrlds78s73b9gddg-a.virginia-postgres.render.com/vision_g9nk")
