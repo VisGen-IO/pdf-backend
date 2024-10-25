@@ -17,7 +17,7 @@ def generate_api_key():
 def generate_access_token(api_key, tenant_id):
     payload = {
         'user_id': str(tenant_id),
-        'expires': time.time() + 86400
+        'expires': time.time() + 86400 # Make timeout dynamic
     }
     token = jwt.encode(payload=payload, key=api_key, algorithm='HS256')
     return token
