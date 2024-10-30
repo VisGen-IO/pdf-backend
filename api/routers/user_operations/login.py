@@ -38,6 +38,12 @@ def user_login(args: LoginModel, SESSION:Session=Depends(get_db)):
             'exception': exception_data
         }
         return JSONResponse(status_code=500, content=data)
+    
+@router.post('/reset_password')
+def reset_password():
+    pass
+    
+
 
 
 
